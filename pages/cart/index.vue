@@ -52,6 +52,7 @@
         <div class="inline-block p-3 bg-black text-white">Update cart</div>
       </div>
     </div>
+    <empty-entity v-else> Your cart is currently empty </empty-entity>
 
     <!-- Total  -->
     <div v-if="cartItems.length" class="flex md:justify-end">
@@ -80,8 +81,10 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import EmptyEntity from '~/components/EmptyEntity.vue'
 
 export default {
+  components: { EmptyEntity },
   name: 'Cart',
 
   computed: {
