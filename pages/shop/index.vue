@@ -8,13 +8,14 @@
       <div class="bg-gray-300 w-1/3 h-12"></div>
     </div>
     <!-- Product List  -->
-    <div class="grid md:grid-cols-3 gap-8 md:gap-5">
+    <div v-if="products.length" class="grid md:grid-cols-3 gap-8 md:gap-5">
       <v-product-card
         v-for="product in products"
         :key="product.name"
         :product="product"
       />
     </div>
+    <empty-entity v-else>No Products found</empty-entity>
   </div>
 </template>
 

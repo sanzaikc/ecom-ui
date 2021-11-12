@@ -6,7 +6,7 @@
       </slot>
     </div>
     <div class="text-base">
-      <slot></slot>
+      <slot> No data found </slot>
     </div>
   </div>
 </template>
