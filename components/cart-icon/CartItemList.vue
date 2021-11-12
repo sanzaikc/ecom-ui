@@ -1,5 +1,5 @@
 <template>
-  <div class="divide-y">
+  <div class="px-6 py-2 max-h-96 w-96 overflow-y-auto">
     <cart-item v-for="item in itemList" :key="item.id" :cart-item="item" />
   </div>
 </template>

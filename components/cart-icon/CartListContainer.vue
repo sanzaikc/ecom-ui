@@ -4,12 +4,7 @@
       absolute
       right-0
       z-10
-      px-6
-      py-2
       pb-4
-      max-h-96
-      overflow-y-auto
-      w-96
       bg-white
       shadow-lg
       invisible

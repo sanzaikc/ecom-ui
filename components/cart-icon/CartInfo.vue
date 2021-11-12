@@ -6,7 +6,7 @@
     </div>
     <cart-list-container>
       <cart-item-list :item-list="cartItems" />
-      <div v-if="cartItems.length">
+      <div v-if="cartItems.length" class="px-6">
         <div class="flex justify-between py-2 font-semibold">
           <div>Subtotal</div>
           <div>${{ subtotal.toFixed(2) }}</div>
