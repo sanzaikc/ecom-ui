@@ -4,9 +4,9 @@
       <cart-count :cartCount="cartItems.length" />
       <cart-subtotal :subtotal="subtotal" />
     </div>
-    <cart-list-container>
+    <cart-item-list-container>
       <cart-item-list :item-list="cartItems" />
-      <div v-if="cartItems.length" class="px-6">
+      <div v-if="cartItems.length" class="px-6 pb-4">
         <div class="flex justify-between py-2 font-semibold">
           <div>Subtotal</div>
           <div>${{ subtotal.toFixed(2) }}</div>
@@ -40,8 +40,8 @@
           </div>
         </div>
       </div>
-      <div v-else>No Cart Item</div>
-    </cart-list-container>
+      <div v-else class="px-6 pb-4">No Cart Item</div>
+    </cart-item-list-container>
   </div>
 </template>
 
@@ -51,7 +51,7 @@ import { mapState, mapGetters } from 'vuex'
 import CartCount from '@/components/cart-icon/CartCount.vue'
 import CartItemList from '@/components/cart-icon/CartItemList.vue'
 import CartSubtotal from './CartSubtotal.vue'
-import CartListContainer from './CartListContainer.vue'
+import CartItemListContainer from './CartItemListContainer.vue'
 
 export default {
   name: 'CartStatus',
@@ -59,7 +59,7 @@ export default {
   components: {
     CartCount,
     CartItemList,
-    CartListContainer,
+    CartItemListContainer,
   },
 
   computed: {

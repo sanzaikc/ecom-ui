@@ -4,7 +4,6 @@
       absolute
       right-0
       z-10
-      pb-4
       bg-white
       shadow-lg
       invisible
