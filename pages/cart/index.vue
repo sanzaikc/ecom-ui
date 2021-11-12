@@ -13,8 +13,8 @@
         </thead>
         <tbody>
           <tr v-for="product in cartItems" :key="product.name" class="">
-            <td class="border border-gray-200 text-red-600 p-3">
-              <i class="bx bx-x bx-sm"></i>
+            <td class="border border-gray-200 text-red-600 p-3 cursor-pointer">
+              <i class="bx bx-x bx-sm" @click="removeFromCart(product)"></i>
             </td>
             <td class="border border-gray-200 py-8 hidden md:block">
               <img
@@ -34,11 +34,16 @@
             </td>
             <td data-title="Quantity" class="border border-gray-200 p-4">
               <icon-box>
-                <input type="number" class="w-8 h-8" value="1" />
+                <input
+                  v-model="product.quantity"
+                  type="number"
+                  class="w-8 h-8"
+                  value="1"
+                />
               </icon-box>
             </td>
             <td data-title="Subtotal" class="border border-gray-200 p-4">
-              $ 0.00
+              $ {{ product.quantity * product.price }}
             </td>
           </tr>
         </tbody>
@@ -58,11 +63,13 @@
               <th class="hidden md:block text-left font-semibold p-3">
                 Subtotal
               </th>
-              <td data-title="Subtotal" class="p-3">$ 0.00</td>
+              <td data-title="Subtotal" class="p-3">$ {{ cartSubtotal }}</td>
             </tr>
             <tr class="">
               <th class="hidden md:block text-left font-semibold p-3">Total</th>
-              <td data-title="Total" class="p-3 font-bold">$ 0.00</td>
+              <td data-title="Total" class="p-3 font-bold">
+                $ {{ cartSubtotal }}
+              </td>
             </tr>
           </tbody>
         </table>
@@ -72,12 +79,23 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
+
 export default {
   name: 'Cart',
 
   computed: {
-    cartItems() {
-      return this.$store.getters['product/recentProducts']
+    ...mapState({
+      cartItems: (state) => state.cart.cartItems,
+    }),
+    ...mapGetters({
+      cartSubtotal: 'cart/cartSubtotal',
+    }),
+  },
+
+  methods: {
+    removeFromCart(product) {
+      this.$store.dispatch('cart/removeCartItem', product)
     },
   },
 }

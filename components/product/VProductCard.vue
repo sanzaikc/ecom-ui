@@ -5,6 +5,7 @@
         :src="require(`~/assets/products/${product.image}.jpg`)"
         class="h-full w-full object-cover"
       />
+      <!-- Card actions  -->
       <div
         class="
           absolute
@@ -124,7 +125,8 @@
             ease-in
           "
         >
-          Add to cart
+          <div v-if="!alreadyInCart" @click="addToCart">Add to cart</div>
+          <div v-else>View Cart</div>
         </div>
       </div>
     </div>
@@ -132,6 +134,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'VerticalProductCard',
 
@@ -139,6 +143,22 @@ export default {
     product: {
       type: Object,
       required: true,
+    },
+  },
+
+  computed: {
+    ...mapState({
+      cartItems: (state) => state.cart.cartItems,
+    }),
+
+    alreadyInCart() {
+      return !!this.cartItems.find((ci) => ci.name === this.product.name)
+    },
+  },
+
+  methods: {
+    addToCart() {
+      this.$store.dispatch('cart/addToCart', { ...this.product, quantity: 1 })
     },
   },
 }

@@ -4,10 +4,10 @@ const state = {
 
 const mutations = {
   ADD_CART_ITEM: (state, cartItem) => {
-    state.cartItems = [...state.cartItem, cartItem]
+    state.cartItems = [...state.cartItems, cartItem]
   },
   REMOVE_CART_ITEM: (state, cartItem) => {
-    state.cartItems = state.cartItem.filter((ci) => ci.id !== cartItem.id)
+    state.cartItems = state.cartItems.filter((ci) => ci.id !== cartItem.id)
   },
 }
 
@@ -20,7 +20,12 @@ const actions = {
   },
 }
 
-const getters = {}
+const getters = {
+  cartSubtotal: (state) =>
+    state.cartItems.reduce((acc, cartItem) => {
+      return (acc += cartItem.price * cartItem.quantity)
+    }, 0),
+}
 
 export default {
   namespaced: true,
