@@ -64,44 +64,21 @@
         </div>
       </div>
       <!-- Cart  -->
-      <div class="flex space-x-6 items-center">
-        <div class="relative block">
-          <i class="bx bx-cart bx-md"></i>
-          <div
-            class="
-              absolute
-              -top-1
-              -right-2
-              bg-red-600
-              text-white text-sm
-              rounded-full
-              px-2
-              py-0.5
-            "
-          >
-            1
-          </div>
-        </div>
-        <nuxt-link
-          to="/cart"
-          class="text-sm font-semibold divide-y divide-gray-400"
-        >
-          <div class="pb-0.5">My Cart</div>
-          <div>$ 0.00</div>
-        </nuxt-link>
-      </div>
+      <cart-status />
     </div>
   </div>
 </template>
 
 <script>
 import AppDropdown from '@/components/base/AppDropdown.vue'
+import CartStatus from '@/components/cart-icon/CartStatus.vue'
 
 export default {
   name: 'Navbar',
 
   components: {
     AppDropdown,
+    CartStatus,
   },
 
   data() {
