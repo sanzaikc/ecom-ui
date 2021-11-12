@@ -23,7 +23,7 @@
               cursor-pointer
             "
           >
-            View Cart
+            <nuxt-link to="/cart">View Cart</nuxt-link>
           </div>
           <div
             class="

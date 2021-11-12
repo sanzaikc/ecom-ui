@@ -24,6 +24,7 @@ module.exports = {
       display: ['group-hover'],
       padding: ['last'],
       translate: ['group-hover'],
+      visibility: ['group-hover'],
     },
   },
   plugins: [],
