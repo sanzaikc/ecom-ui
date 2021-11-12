@@ -1,39 +1,15 @@
 <template>
   <div class="relative group">
     <div class="flex space-x-6 items-center">
-      <cart-icon />
-      <div class="text-sm font-semibold divide-y divide-gray-400">
-        <div class="pb-0.5">My Cart</div>
-        <div>$ 0.00</div>
-      </div>
+      <cart-count :cartCount="cartItems.length" />
+      <cart-subtotal :subtotal="subtotal" />
     </div>
-    <div
-      class="
-        absolute
-        px-6
-        py-2
-        pb-4
-        max-h-96
-        overflow-y-auto
-        w-96
-        right-0
-        bg-white
-        shadow-lg
-        transform
-        translate-y-8
-        group-hover:translate-y-0
-        opacity-0
-        group-hover:opacity-100
-        transition
-        duration-200
-        ease-in
-      "
-    >
-      <cart-item-list />
-      <div>
+    <cart-list-container>
+      <cart-item-list :item-list="cartItems" />
+      <div v-if="cartItems.length">
         <div class="flex justify-between py-2 font-semibold">
           <div>Subtotal</div>
-          <div>$ 0.00</div>
+          <div>${{ subtotal.toFixed(2) }}</div>
         </div>
         <div class="flex justify-between space-x-4">
           <div
@@ -64,18 +40,35 @@
           </div>
         </div>
       </div>
-    </div>
+      <div v-else>No Cart Item</div>
+    </cart-list-container>
   </div>
 </template>
 
 <script>
-import CartIcon from '@/components/cart-icon/CartIcon.vue'
+import { mapState, mapGetters } from 'vuex'
+
+import CartCount from '@/components/cart-icon/CartCount.vue'
 import CartItemList from '@/components/cart-icon/CartItemList.vue'
+import CartSubtotal from './CartSubtotal.vue'
+import CartListContainer from './CartListContainer.vue'
+
 export default {
   name: 'CartStatus',
 
-  components: { CartIcon, CartItemList },
+  components: {
+    CartCount,
+    CartItemList,
+    CartListContainer,
+  },
+
+  computed: {
+    ...mapState({
+      cartItems: (state) => state.cart.cartItems,
+    }),
+    ...mapGetters({
+      subtotal: 'cart/cartSubtotal',
+    }),
+  },
 }
 </script>
-
-<style></style>

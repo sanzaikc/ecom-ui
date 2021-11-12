@@ -13,7 +13,7 @@
         py-0.5
       "
     >
-      1
+      {{ cartCount }}
     </div>
   </div>
 </template>
@@ -21,7 +21,12 @@
 <script>
 export default {
   name: 'CartIcon',
+
+  props: {
+    cartCount: {
+      type: [String, Number],
+      default: 0,
+    },
+  },
 }
 </script>
-
-<style></style>

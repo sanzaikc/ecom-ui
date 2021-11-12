@@ -1,6 +1,6 @@
 <template>
   <div class="divide-y">
-    <cart-item v-for="item in cartItems" :key="item.id" :cart-item="item" />
+    <cart-item v-for="item in itemList" :key="item.id" :cart-item="item" />
   </div>
 </template>
 
@@ -14,12 +14,11 @@ export default {
 
   components: { CartItem },
 
-  computed: {
-    ...mapState({
-      cartItems: (state) => state.cart.cartItems,
-    }),
+  props: {
+    itemList: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>
-
-<style></style>

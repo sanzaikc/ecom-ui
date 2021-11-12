@@ -1,6 +1,12 @@
 <template>
   <div class="flex items-center justify-between py-4">
-    <div class="bg-gray-200 h-20 w-20"></div>
+    <div class="bg-gray-200 h-20 w-20">
+      <img
+        :src="require(`~/assets/products/${cartItem.image}.jpg`)"
+        alt="Cart Item"
+        class="h-full w-full"
+      />
+    </div>
     <div class="text-center">
       <div class="font-semibold text-base">{{ cartItem.name }}</div>
       <div class="text-gray-400">
@@ -34,5 +40,3 @@ export default {
   },
 }
 </script>
-
-<style></style>

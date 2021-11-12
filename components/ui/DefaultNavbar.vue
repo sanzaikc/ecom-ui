@@ -64,21 +64,21 @@
         </div>
       </div>
       <!-- Cart  -->
-      <cart-status />
+      <cart-info />
     </div>
   </div>
 </template>
 
 <script>
 import AppDropdown from '@/components/base/AppDropdown.vue'
-import CartStatus from '@/components/cart-icon/CartStatus.vue'
+import CartInfo from '~/components/cart-icon/CartInfo.vue'
 
 export default {
   name: 'Navbar',
 
   components: {
     AppDropdown,
-    CartStatus,
+    CartInfo,
   },
 
   data() {
