@@ -28,7 +28,7 @@ export default {
 
   props: {
     cartItem: {
-      type: 'Object',
+      type: Object,
       required: true,
     },
   },
