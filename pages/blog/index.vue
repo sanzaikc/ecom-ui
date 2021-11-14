@@ -1,14 +1,39 @@
 <template>
- <with-product-aside >
-     Blog
- </with-product-aside>
+  <with-product-aside>
+    <blog-preview v-for="blog in blogs" :key="blog.title" :blog="blog" />
+  </with-product-aside>
 </template>
 
 <script>
+import BlogPreview from '~/components/blog/BlogPreview.vue'
+
 export default {
   name: 'Blogs',
+
+  components: { BlogPreview },
+
+  data() {
+    return {
+      blogs: [
+        {
+          title: 'Spring sunner fashion trends',
+          image: 'blog-1',
+          content: '',
+        },
+        {
+          title: 'Current Styling Trend',
+          image: 'blog-2',
+          content: '',
+        },
+        {
+          title: 'Best fashion trends for women',
+          image: 'blog-3',
+          content: '',
+        },
+      ],
+    }
+  },
 }
 </script>
 
-<style><
-    WithProductAside/style>
+<style></style>

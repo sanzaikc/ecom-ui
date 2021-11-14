@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       colors: {
         emerald: colors.emerald,
-        gray: colors.trueGray,
+        // gray: colors.trueGray,
       },
     },
   },
@@ -27,5 +27,5 @@ module.exports = {
       visibility: ['group-hover'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 }
