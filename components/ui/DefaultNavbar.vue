@@ -86,7 +86,7 @@ export default {
     return {
       navMenus: [
         { name: 'Home', path: '/' },
-        { name: 'Blog', path: '/' },
+        { name: 'Blog', path: '/blog' },
         {
           name: 'My Account',
           path: '/',
