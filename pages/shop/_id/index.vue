@@ -26,7 +26,7 @@
             quisquam nulla harum provident quaerat eos cum voluptas iusto unde
             ducimus ipsum officia maiores architecto.
           </div>
-          <div class="text-4xl font-semibold mt-4">$ 0.00</div>
+          <div class="text-4xl font-medium mt-4">$ 0.00</div>
         </div>
         <!-- Add to Cart  -->
         <div class="py-5 flex space-x-2">
@@ -76,9 +76,9 @@
     </div>
     <!-- Related Products  -->
     <div v-if="relatedProducts.length">
-      <div class="text-2xl font-semibold mb-8">Related Product</div>
+      <div class="text-2xl font-medium mb-8">Related Product</div>
       <div class="grid md:grid-cols-3 gap-8 md:gap-5">
-        <v-product-card
+        <v-product-preview
           v-for="product in relatedProducts"
           :key="product.name"
           :product="product"
