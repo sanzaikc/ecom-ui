@@ -111,6 +111,8 @@ import WithProductAside from '~/components/WithProductAside.vue'
 export default {
   name: 'BlogDetail',
 
+  scrollToTop: true,
+
   methods: {
     getDate(date) {
       return date.getDate()
