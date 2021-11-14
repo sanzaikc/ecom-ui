@@ -89,13 +89,13 @@
 </template>
 
 <script>
-import VProductCard from '@/components/product/VProductCard.vue'
+import VProductPreview from '@/components/product/VProductPreview.vue'
 
 export default {
   name: 'ProductShow',
 
   components: {
-    VProductCard,
+    VProductPreview,
   },
 
   computed: {

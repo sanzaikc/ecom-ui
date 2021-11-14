@@ -9,7 +9,7 @@
     </div>
     <!-- Product List  -->
     <div v-if="products.length" class="grid md:grid-cols-3 gap-8 md:gap-5">
-      <v-product-card
+      <v-product-preview
         v-for="product in products"
         :key="product.name"
         :product="product"
@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import VProductCard from '@/components/product/VProductCard.vue'
+import VProductPreview from '@/components/product/VProductPreview.vue'
 
 export default {
   name: 'Shop',
 
   components: {
-    VProductCard,
+    VProductPreview,
   },
 
   asyncData() {

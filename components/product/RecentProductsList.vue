@@ -2,7 +2,7 @@
   <div>
     <list-container>
       <template #heading>Products</template>
-      <h-product-card
+      <h-product-preview
         v-for="product in products"
         :key="product.name"
         :product="product"
@@ -15,12 +15,12 @@
 <script>
 import { mapGetters } from 'vuex'
 
-import HProductCard from '@/components/product/HProductCard.vue'
+import HProductPreview from '~/components/product/HProductPreview.vue'
 
 export default {
   name: 'RecentProductList',
 
-  components: { HProductCard },
+  components: { HProductPreview },
 
   computed: {
     products() {
