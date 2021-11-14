@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-14">
+  <div>
     <div class="preview-image">
       <img
         :src="require(`~/assets/blogs/${blog.image}.jpg`)"
@@ -7,7 +7,7 @@
         class="h-full w-full object-cover"
       />
     </div>
-    <div class="bg-gray-50 p-4 md:px-10 md:py-14">
+    <div class="bg-gray-50 p-4 md:px-10 py-8 md:py-14">
       <div
         class="
           flex flex-col
@@ -32,7 +32,9 @@
         <!-- Blog Preview -->
         <div class="flex-grow text-center md:text-left">
           <div class="text-sm text-red-600 mb-4">Blog</div>
-          <div class="text-3xl font-semibold mb-6">{{ blog.title }}</div>
+          <div class="text-3xl font-semibold line-clamp-2 mb-6">
+            {{ blog.title }}
+          </div>
           <div class="line-clamp-2 tracking-wide mb-8">
             Blog Card Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Possimus nisi alias illum laboriosam maxime optio inventore totam
@@ -47,7 +49,9 @@
             fugit iusto repudiandae? Excepturi sapiente quas sequi numquam
             consequuntur, possimus nam error!
           </div>
-          <animated-button>Continue Reading</animated-button>
+          <nuxt-link to="/">
+            <animated-button>Continue Reading</animated-button>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -55,7 +59,8 @@
 </template>
 
 <script>
-import AnimatedButton from '../base/AnimatedButton.vue'
+import AnimatedButton from '@/components/base/AnimatedButton.vue'
+
 export default {
   components: { AnimatedButton },
   name: 'BlogCard',

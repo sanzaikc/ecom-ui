@@ -1,6 +1,11 @@
 <template>
   <with-product-aside>
-    <blog-preview v-for="blog in blogs" :key="blog.title" :blog="blog" />
+    <blog-preview
+      v-for="blog in blogs"
+      :key="blog.title"
+      :blog="blog"
+      class="pb-14 last:pb-0"
+    />
   </with-product-aside>
 </template>
 
