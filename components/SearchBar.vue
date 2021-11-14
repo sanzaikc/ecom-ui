@@ -32,7 +32,7 @@
         placeholder="Search Entire Store Here"
         class="px-2 md:py-1.5 placeholder-gray-500 w-full md:w-72"
       />
-      <div class="bg-red-600 text-white px-4 py-1.5 md:py-2.5 cursor-pointer">
+      <div class="bg-red-500 text-white px-4 py-1.5 md:py-2.5 cursor-pointer">
         <i class="bx bx-search text-2xl"></i>
       </div>
     </div>

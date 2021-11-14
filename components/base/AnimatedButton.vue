@@ -32,7 +32,7 @@
         class="
           absolute
           inset-0
-          bg-red-600
+          bg-red-500
           text-white
           flex
           justify-center

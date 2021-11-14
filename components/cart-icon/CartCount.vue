@@ -6,7 +6,7 @@
         absolute
         -top-1
         -right-2
-        bg-red-600
+        bg-red-500
         text-white text-sm
         rounded-full
         px-2

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="preview-image">
+    <div class="blog-preview-image">
       <img
         :src="require(`~/assets/blogs/${blog.image}.jpg`)"
         alt="Blog Thumbail"
@@ -49,7 +49,7 @@
             fugit iusto repudiandae? Excepturi sapiente quas sequi numquam
             consequuntur, possimus nam error!
           </div>
-          <nuxt-link to="/">
+          <nuxt-link :to="`/blog/${blog.title}`">
             <animated-button>Continue Reading</animated-button>
           </nuxt-link>
         </div>
@@ -73,15 +73,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.preview-image {
-  height: 590px;
-}
-
-@media screen and (max-width: 720px) {
-  .preview-image {
-    height: 246px;
-  }
-}
-</style>

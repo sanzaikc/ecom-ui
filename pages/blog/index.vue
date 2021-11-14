@@ -41,4 +41,14 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.blog-preview-image {
+  height: 590px;
+}
+
+@media screen and (max-width: 720px) {
+  .blog-preview-image {
+    height: 246px;
+  }
+}
+</style>

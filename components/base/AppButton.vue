@@ -2,7 +2,7 @@
   <div
     class="
       inline-block
-      bg-red-600
+      bg-red-500
       text-white
       px-6
       md:px-8

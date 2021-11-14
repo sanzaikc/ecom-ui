@@ -16,6 +16,6 @@ export default {
 
 <style>
 .default-container {
-  @apply container mx-auto px-4 md:px-16;
+  @apply container mx-auto px-4 md:px-20;
 }
 </style>
