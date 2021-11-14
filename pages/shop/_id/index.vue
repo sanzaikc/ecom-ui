@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <with-product-aside>
     <div
       class="
         flex flex-col
@@ -85,7 +85,7 @@
         />
       </div>
     </div>
-  </div>
+  </with-product-aside>
 </template>
 
 <script>

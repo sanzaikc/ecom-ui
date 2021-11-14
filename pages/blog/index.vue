@@ -1,5 +1,7 @@
 <template>
-  <div class="default-container">Blog</div>
+ <with-product-aside >
+     Blog
+ </with-product-aside>
 </template>
 
 <script>
@@ -8,4 +10,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style><
+    WithProductAside/style>
