@@ -1,11 +1,14 @@
 <template>
   <with-product-aside>
-    <blog-preview
-      v-for="blog in blogs"
-      :key="blog.title"
-      :blog="blog"
-      class="pb-14 last:pb-0"
-    />
+    <div v-if="blogs.length">
+      <blog-preview
+        v-for="blog in blogs"
+        :key="blog.title"
+        :blog="blog"
+        class="pb-14 last:pb-0"
+      />
+    </div>
+    <empty-entity v-else>No blogs found</empty-entity>
   </with-product-aside>
 </template>
 
