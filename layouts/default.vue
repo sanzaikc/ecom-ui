@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen overflow-y-scroll">
+  <div class="h-screen">
     <social-media class="hidden md:block" />
     <app-header class="hidden md:block" />
     <default-navbar class="hidden md:block" />

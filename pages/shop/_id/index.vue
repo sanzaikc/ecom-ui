@@ -94,6 +94,8 @@ import VProductPreview from '@/components/product/VProductPreview.vue'
 export default {
   name: 'ProductShow',
 
+  scrollToTop: true,
+
   components: {
     VProductPreview,
   },
