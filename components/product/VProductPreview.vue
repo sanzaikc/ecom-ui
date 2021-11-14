@@ -92,7 +92,7 @@
     <div class="relative">
       <div
         class="
-          font-semibold
+          font-medium
           group-hover:opacity-0
           transition
           duration-300
@@ -106,7 +106,7 @@
           absolute
           top-0
           left-0
-          font-semibold
+          font-medium
           transform
           -translate-x-6
           opacity-0

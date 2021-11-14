@@ -32,7 +32,7 @@
               :to="menu.path"
               class="
                 text-sm
-                font-semibold
+                font-medium
                 uppercase
                 group-hover:text-red-600
                 transition

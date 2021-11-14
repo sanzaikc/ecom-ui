@@ -5,7 +5,7 @@
     <!-- Contact Detail  -->
     <div class="default-container flex flex-col md:flex-row md:space-x-6">
       <div class="w-full md:w-1/2 mb-12 md:mb-0">
-        <div class="text-2xl font-bold uppercase mb-10">Get in touch !</div>
+        <div class="text-2xl font-semibold uppercase mb-10">Get in touch !</div>
 
         <div class="text-base tracking-wide">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
@@ -14,7 +14,7 @@
         </div>
 
         <div>
-          <div class="my-6 uppercase font-semibold">Details</div>
+          <div class="my-6 uppercase font-medium">Details</div>
           <div class="text-base">
             <div>3 Wakehurst Street New York, NY 10002</div>
             <div>+1-202-555-0133</div>

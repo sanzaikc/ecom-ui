@@ -4,12 +4,12 @@
     <div v-if="cartItems.length">
       <table class="w-full border-collapse mb-2">
         <thead class="bg-gray-100">
-          <th class="w-10 font-semibold">&nbsp;</th>
-          <th class="w-40 font-semibold">&nbsp;</th>
-          <th class="text-left py-4 font-semibold">Product</th>
-          <th class="text-left py-4 font-semibold">Price</th>
-          <th class="text-left py-4 font-semibold">Quantity</th>
-          <th class="text-left py-4 font-semibold">Subtotal</th>
+          <th class="w-10 font-medium">&nbsp;</th>
+          <th class="w-40 font-medium">&nbsp;</th>
+          <th class="text-left py-4 font-medium">Product</th>
+          <th class="text-left py-4 font-medium">Price</th>
+          <th class="text-left py-4 font-medium">Quantity</th>
+          <th class="text-left py-4 font-medium">Subtotal</th>
         </thead>
         <tbody>
           <tr v-for="product in cartItems" :key="product.name" class="">
@@ -57,18 +57,18 @@
     <!-- Total  -->
     <div v-if="cartItems.length" class="flex md:justify-end">
       <div class="w-full md:w-1/2">
-        <div class="text-xl font-semibold mb-6">Cart Total</div>
+        <div class="text-xl font-medium mb-6">Cart Total</div>
         <table class="w-full border-collapse">
           <tbody class="border">
             <tr class="border-b border-gray-200">
-              <th class="hidden md:block text-left font-semibold p-3">
+              <th class="hidden md:block text-left font-medium p-3">
                 Subtotal
               </th>
               <td data-title="Subtotal" class="p-3">$ {{ cartSubtotal }}</td>
             </tr>
             <tr class="">
-              <th class="hidden md:block text-left font-semibold p-3">Total</th>
-              <td data-title="Total" class="p-3 font-bold">
+              <th class="hidden md:block text-left font-medium p-3">Total</th>
+              <td data-title="Total" class="p-3 font-semibold">
                 $ {{ cartSubtotal }}
               </td>
             </tr>

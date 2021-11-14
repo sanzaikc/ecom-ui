@@ -12,10 +12,10 @@
         md:pr-24
       "
     >
-      <div class="uppercase md:text-lg font-semibold mb-2">
+      <div class="uppercase md:text-lg font-medium mb-2">
         <slot name="subtitle">Promo subtitle</slot>
       </div>
-      <div class="text-3xl md:text-5xl font-bold mb-4">
+      <div class="text-3xl md:text-5xl font-semibold mb-4">
         <slot name="title">Promo title</slot>
       </div>
       <slot name="action" />

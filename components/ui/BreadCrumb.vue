@@ -3,11 +3,11 @@
     <div class="default-container py-16">
       <div class="flex justify-center items-center">
         <div class="text-center">
-          <div class="text-3xl font-bold mb-5">Shop</div>
+          <div class="text-3xl font-semibold mb-5">Shop</div>
           <div class="flex items-center text-sm uppercase">
-            <nuxt-link to="/" class="font-bold">Home</nuxt-link>
+            <nuxt-link to="/" class="font-semibold">Home</nuxt-link>
             <span class="mx-2 text-2xl">/</span>
-            <div class="font-bold text-red-600">{{ currentRoute }}</div>
+            <div class="font-semibold text-red-600">{{ currentRoute }}</div>
           </div>
         </div>
       </div>

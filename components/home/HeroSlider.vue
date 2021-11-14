@@ -8,10 +8,10 @@
       <div class="absolute inset-0 bg-gray-700 opacity-20"></div>
       <div class="absolute inset-0 flex justify-center items-center">
         <div class="text-white text-center">
-          <div class="uppercase md:text-lg font-semibold mb-2">
+          <div class="uppercase md:text-lg font-medium mb-2">
             {{ slide.subtitle }}
           </div>
-          <div class="text-3xl md:text-5xl font-bold mb-4">
+          <div class="text-3xl md:text-5xl font-semibold mb-4">
             {{ slide.title }}
           </div>
           <app-button>Shop Now</app-button>

@@ -61,7 +61,7 @@ export default {
 }
 
 .footer-menu {
-  @apply text-base font-semibold uppercase;
+  @apply text-base font-medium uppercase;
 }
 
 .footer-submenu {

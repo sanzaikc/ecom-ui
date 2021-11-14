@@ -27,12 +27,12 @@
               class="h-full w-full"
             />
           </div>
-          <div class="font-semibold text-sm">John Doe</div>
+          <div class="font-medium text-sm">John Doe</div>
         </div>
         <!-- Blog Preview -->
         <div class="flex-grow text-center md:text-left">
           <div class="text-sm text-red-600 mb-4">Blog</div>
-          <div class="text-3xl font-semibold line-clamp-2 mb-6">
+          <div class="text-3xl font-medium line-clamp-2 mb-6">
             {{ blog.title }}
           </div>
           <div class="line-clamp-2 tracking-wide mb-8">

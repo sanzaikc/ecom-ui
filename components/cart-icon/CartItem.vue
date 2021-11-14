@@ -8,7 +8,7 @@
       />
     </div>
     <div class="text-center">
-      <div class="font-semibold text-base">{{ cartItem.name }}</div>
+      <div class="font-medium text-base">{{ cartItem.name }}</div>
       <div class="text-gray-400">
         <span> {{ cartItem.quantity }} </span>
         <i class="bx bx-x bx-xs"></i>

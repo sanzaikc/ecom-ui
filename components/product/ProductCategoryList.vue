@@ -9,7 +9,7 @@
           py-5
           last:pb-0
           text-base
-          font-semibold
+          font-medium
           tracking-wide
           hover:text-red-600
           transition

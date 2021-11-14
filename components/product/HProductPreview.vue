@@ -8,7 +8,7 @@
       />
     </div>
     <div>
-      <div class="font-semibold uppercase">{{ product.name }}</div>
+      <div class="font-medium uppercase">{{ product.name }}</div>
       <div class="text-gray-500">${{ product.price }}</div>
     </div>
   </div>
