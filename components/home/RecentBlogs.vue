@@ -1,5 +1,5 @@
 <template>
-  <div class="default-container">
+  <div class="default-container mb-20">
     <section-header>
       <template #title>Fashion blog</template>
       <template #subtitle>What we see</template>

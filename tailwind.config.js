@@ -23,6 +23,7 @@ module.exports = {
     extend: {
       display: ['group-hover'],
       padding: ['last'],
+      scale: ['group-hover'],
       translate: ['group-hover'],
       visibility: ['group-hover'],
       width: ['group-hover'],
