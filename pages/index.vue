@@ -1,13 +1,15 @@
 <template>
   <div>
     <hero-banner />
+    <recent-products />
     <recent-blogs />
   </div>
 </template>
 
 <script>
 import HeroBanner from '@/components/home/HeroBanner.vue'
-import RecentBlogs from '~/components/blog/RecentBlogs.vue'
+import RecentBlogs from '~/components/home/RecentBlogs.vue'
+import RecentProducts from '~/components/home/RecentProducts.vue'
 
 export default {
   name: 'Home',
@@ -15,6 +17,7 @@ export default {
   components: {
     HeroBanner,
     RecentBlogs,
+    RecentProducts,
   },
 }
 </script>

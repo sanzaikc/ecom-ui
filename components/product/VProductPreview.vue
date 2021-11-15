@@ -1,6 +1,11 @@
 <template>
   <div class="mb-2 group">
-    <div class="relative h-72 w-full bg-red-200">
+    <div
+      class="relative w-full bg-red-200 mb-1"
+      :style="{
+        height: lg ? '380px' : '288px',
+      }"
+    >
       <img
         :src="require(`~/assets/products/${product.image}.jpg`)"
         class="h-full w-full object-cover"
@@ -143,6 +148,10 @@ export default {
     product: {
       type: Object,
       required: true,
+    },
+    lg: {
+      type: Boolean,
+      default: false,
     },
   },
 
