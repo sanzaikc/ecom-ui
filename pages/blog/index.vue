@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import BlogPreview from '~/components/blog/BlogPreview.vue'
 
 export default {
@@ -20,26 +22,10 @@ export default {
 
   components: { BlogPreview },
 
-  data() {
-    return {
-      blogs: [
-        {
-          title: 'Spring sunner fashion trends',
-          image: 'blog-1',
-          content: '',
-        },
-        {
-          title: 'Current Styling Trend',
-          image: 'blog-2',
-          content: '',
-        },
-        {
-          title: 'Best fashion trends for women',
-          image: 'blog-3',
-          content: '',
-        },
-      ],
-    }
+  computed: {
+    ...mapState({
+      blogs: (state) => state.blog.allBlogs,
+    }),
   },
 }
 </script>
