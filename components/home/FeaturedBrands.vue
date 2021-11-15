@@ -1,5 +1,5 @@
 <template>
-  <div class="default-container mt-20">
+  <div class="default-container">
     <Flicking :options="options" :plugins="plugins" class="h-full w-full">
       <div
         class="
