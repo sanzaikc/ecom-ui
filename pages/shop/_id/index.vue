@@ -102,7 +102,7 @@ export default {
 
   computed: {
     relatedProducts() {
-      return this.$store.getters['product/recentProducts']
+      return this.$store.getters['product/relatedProducts']
     },
   },
 }
