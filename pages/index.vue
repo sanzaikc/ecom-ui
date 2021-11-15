@@ -5,6 +5,7 @@
     <recent-products />
     <featured-banner />
     <recent-blogs />
+    <featured-brands />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import RecentBlogs from '~/components/home/RecentBlogs.vue'
 import RecentProducts from '~/components/home/RecentProducts.vue'
 import FeaturedCollection from '~/components/home/FeaturedCollection.vue'
 import FeaturedBanner from '~/components/home/FeaturedBanner.vue'
+import FeaturedBrands from '~/components/home/FeaturedBrands.vue'
 
 export default {
   name: 'Home',
@@ -24,6 +26,7 @@ export default {
     FeaturedCollection,
     RecentBlogs,
     RecentProducts,
+    FeaturedBrands,
   },
 }
 </script>

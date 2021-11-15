@@ -21,6 +21,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      backdropGrayscale: ['hover'],
       display: ['group-hover'],
       padding: ['last'],
       scale: ['group-hover'],
