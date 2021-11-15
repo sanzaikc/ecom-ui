@@ -36,8 +36,8 @@
           font-medium
         "
       >
-        <div class="text-4xl">{{ getDate(new Date()) }}</div>
-        <div class="uppercase">{{ getMonth(new Date()) }}</div>
+        <div class="text-4xl">{{ getDate(new Date()).day }}</div>
+        <div class="uppercase">{{ getDate(new Date()).month }}</div>
       </div>
     </div>
     <!-- Blog content  -->
@@ -106,6 +106,8 @@
 </template>
 
 <script>
+import splitDate from '~/mixins/splitDate'
+
 import WithProductAside from '~/components/WithProductAside.vue'
 
 export default {
@@ -113,28 +115,7 @@ export default {
 
   scrollToTop: true,
 
-  methods: {
-    getDate(date) {
-      return date.getDate()
-    },
-    getMonth(date) {
-      const monthNames = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ]
-      return monthNames[date.getMonth()].slice(0, 3)
-    },
-  },
+  mixins: [splitDate],
 }
 </script>
 

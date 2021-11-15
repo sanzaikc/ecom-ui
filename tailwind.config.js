@@ -25,6 +25,7 @@ module.exports = {
       padding: ['last'],
       translate: ['group-hover'],
       visibility: ['group-hover'],
+      width: ['group-hover'],
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],

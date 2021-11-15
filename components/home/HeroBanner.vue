@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:flex-row bg-red-200" style="height: 68vh">
+  <div class="flex flex-col md:flex-row bg-red-200 mb-14" style="height: 68vh">
     <!-- Carousel  -->
     <div class="w-full md:w-1/2 h-1/3 md:h-full">
       <hero-slider />
