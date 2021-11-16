@@ -29,6 +29,8 @@ export default {
     VProductPreview,
   },
 
+  scrollToTop: true,
+
   asyncData() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

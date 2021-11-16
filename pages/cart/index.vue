@@ -84,8 +84,11 @@ import { mapState, mapGetters } from 'vuex'
 import EmptyEntity from '~/components/EmptyEntity.vue'
 
 export default {
-  components: { EmptyEntity },
   name: 'Cart',
+
+  components: { EmptyEntity },
+
+  scrollToTop: true,
 
   computed: {
     ...mapState({

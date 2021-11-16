@@ -22,6 +22,8 @@ export default {
 
   components: { BlogPreview },
 
+  scrollToTop: true,
+
   computed: {
     ...mapState({
       blogs: (state) => state.blog.allBlogs,
