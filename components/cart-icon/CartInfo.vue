@@ -12,32 +12,12 @@
           <div>${{ subtotal.toFixed(2) }}</div>
         </div>
         <div class="flex justify-between space-x-4">
-          <div
-            class="
-              w-1/2
-              text-center
-              px-4
-              py-2
-              bg-red-500
-              text-white
-              cursor-pointer
-            "
-          >
+          <app-button small on-hover class="w-1/2 text-center">
             <nuxt-link to="/cart">View Cart</nuxt-link>
-          </div>
-          <div
-            class="
-              w-1/2
-              text-center
-              px-4
-              py-2
-              bg-black
-              text-white
-              cursor-pointer
-            "
-          >
-            Checkout
-          </div>
+          </app-button>
+          <app-button inverse on-hover small class="w-1/2 text-center">
+            <nuxt-link to="/">Checkout</nuxt-link>
+          </app-button>
         </div>
       </div>
       <div v-else class="px-6 pb-4">No Cart Item</div>
@@ -52,6 +32,7 @@ import CartCount from '@/components/cart-icon/CartCount.vue'
 import CartItemList from '@/components/cart-icon/CartItemList.vue'
 import CartSubtotal from './CartSubtotal.vue'
 import CartItemListContainer from './CartItemListContainer.vue'
+import AppButton from '../base/AppButton.vue'
 
 export default {
   name: 'CartStatus',
@@ -60,6 +41,7 @@ export default {
     CartCount,
     CartItemList,
     CartItemListContainer,
+    AppButton,
   },
 
   computed: {

@@ -49,7 +49,8 @@
         </tbody>
       </table>
       <div class="border border-gray-200 flex justify-end px-2 py-4 mb-12">
-        <div class="inline-block p-3 bg-black text-white">Update cart</div>
+        <!-- <div class="inline-block p-3 bg-black text-white">Update cart</div> -->
+        <app-button inverse on-hover small>Update Cart</app-button>
       </div>
     </div>
     <empty-entity v-else> Your cart is currently empty </empty-entity>
@@ -81,12 +82,13 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import AppButton from '~/components/base/AppButton.vue'
 import EmptyEntity from '~/components/EmptyEntity.vue'
 
 export default {
   name: 'Cart',
 
-  components: { EmptyEntity },
+  components: { EmptyEntity, AppButton },
 
   scrollToTop: true,
 
