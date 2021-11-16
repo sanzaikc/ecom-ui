@@ -24,7 +24,7 @@
         {{ text }}
       </option>
     </select>
-    <div class="hidden md:block text-3xl font-thin text-gray-400 pb-2">|</div>
+    <div class="hidden md:block text-3xl font-thin text-gray-400">|</div>
     <div class="flex border border-gray-400 md:border-0 md:rounded-none">
       <input
         v-model="search"
