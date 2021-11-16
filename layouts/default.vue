@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="min-h-screen">
     <social-media class="hidden md:block" />
     <app-header class="hidden md:block" />
     <default-navbar class="hidden md:block" />

@@ -1,6 +1,6 @@
 <template>
   <nuxt-link to="/">
-    <img src="~/assets/zigcy-logo.png" class="h-14 w-1/2 md:w-32" />
+    <img src="~/assets/zigcy-logo.png" class="h-12 md:h-14 md:w-32" />
   </nuxt-link>
 </template>
 
