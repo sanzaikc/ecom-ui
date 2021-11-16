@@ -14,10 +14,16 @@
         <div class="w-full md:w-1/5 mb-6 md:mb-0">
           <div class="footer-menu">Information</div>
           <ul>
-            <li class="footer-submenu">Home</li>
-            <li class="footer-submenu">Blog</li>
-            <li class="footer-submenu">Shop</li>
-            <li class="footer-submenu">Contact Us</li>
+            <nuxt-link to="/"><li class="footer-submenu">Home</li></nuxt-link>
+            <nuxt-link to="/blog">
+              <li class="footer-submenu">Blog</li>
+            </nuxt-link>
+            <nuxt-link to="/shop">
+              <li class="footer-submenu">Shop</li>
+            </nuxt-link>
+            <nuxt-link to="/contact">
+              <li class="footer-submenu">Contact Us</li>
+            </nuxt-link>
           </ul>
         </div>
         <div class="w-full md:w-1/5 mb-6 md:mb-0">
@@ -34,7 +40,9 @@
           <ul>
             <li class="footer-submenu">My Account</li>
             <li class="footer-submenu">WishList</li>
-            <li class="footer-submenu">Cart</li>
+            <nuxt-link to="/cart">
+              <li class="footer-submenu">Cart</li>
+            </nuxt-link>
           </ul>
         </div>
       </div>
