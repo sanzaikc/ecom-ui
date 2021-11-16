@@ -33,7 +33,7 @@
           <icon-box>
             <input type="number" class="w-8" value="1" />
           </icon-box>
-          <div class="inline-block p-3 bg-black text-white">Add to cart</div>
+          <app-button inverse small>Add to cart</app-button>
           <icon-box>
             <i class="bx bx-heart text-xl"></i>
           </icon-box>
@@ -90,12 +90,14 @@
 
 <script>
 import VProductPreview from '@/components/product/VProductPreview.vue'
+import AppButton from '~/components/base/AppButton.vue'
 
 export default {
   name: 'ProductShow',
 
   components: {
     VProductPreview,
+    AppButton,
   },
 
   scrollToTop: true,

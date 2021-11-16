@@ -37,8 +37,7 @@
                 <input
                   v-model="product.quantity"
                   type="number"
-                  class="w-8 h-8"
-                  value="1"
+                  class="w-10 h-12"
                 />
               </icon-box>
             </td>
@@ -109,7 +108,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Force table to not be like tables anymore */
