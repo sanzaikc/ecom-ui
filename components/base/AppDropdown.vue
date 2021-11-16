@@ -1,17 +1,22 @@
 <template>
   <div>
     <div class="group relative">
-      <slot name="trigger" />
+      <div class="group-hover:text-red-600 transition duration-200 ease-in">
+        <slot name="trigger" />
+      </div>
       <div
         class="
           absolute
-          min-w-full
           bg-white
-          rounded
-          hidden
-          group-hover:block
+          transform
+          translate-y-10
+          group-hover:translate-y-0
+          opacity-10
+          group-hover:opacity-100
+          invisible
+          group-hover:visible
           transition
-          duration-500
+          duration-200
           ease-in
           z-10
         "

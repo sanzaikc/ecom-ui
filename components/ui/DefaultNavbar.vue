@@ -4,64 +4,58 @@
       <app-dropdown>
         <template #trigger>
           <div class="flex items-center space-x-2 cursor-pointer">
-            <i class="bx bx-menu text-xl mt-0.5"></i>
+            <i class="bx bx-menu text-xl"></i>
             <div>Browse Categories</div>
           </div>
         </template>
         <template #dropdown-items>
-          <ul>
+          <ul class="px-6 py-2 divide-y-2 w-60">
             <li
               v-for="n in 5"
               :key="n"
-              class="px-4 py-2 hover:text-red-600 cursor-pointer"
+              class="py-2 hover:text-red-600 cursor-pointer"
             >
-              Item-{{ n }}
+              <div class="text-sm text-gray-500 hover:text-red-600">
+                <span>
+                  <i class="bx bx-chevron-right"></i>
+                </span>
+                Category-{{ n }}
+              </div>
             </li>
           </ul>
         </template>
       </app-dropdown>
       <!-- Navmenus  -->
       <div class="flex space-x-10">
-        <div
-          class="flex items-center space-x-2"
+        <app-dropdown
           v-for="menu in navMenus"
           :key="menu.name"
+          class="font-medium text-sm"
         >
-          <div class="relative group">
-            <nuxt-link
-              :to="menu.path"
-              class="
-                text-sm
-                font-medium
-                uppercase
-                group-hover:text-red-600
-                transition
-                duration-200
-                ease-in
-                flex
-                items-center
-                space-x-2
-              "
-            >
-              <div>{{ menu.name }}</div>
-              <i v-if="menu.subMenus" class="bx bx-chevron-down text-xl"></i>
-            </nuxt-link>
-            <div
-              v-if="menu.subMenus"
-              class="absolute left-0 w-48 mt-2 p-4 bg-red-200 opacity-0"
-            >
-              <div class="flex flex-col space-y-4">
-                <nuxt-link
-                  v-for="subMenu in menu.subMenus"
-                  :key="subMenu.name"
-                  :to="subMenu.path"
-                >
-                  {{ subMenu.name }}
-                </nuxt-link>
+          <template #trigger>
+            <nuxt-link :to="menu.path">
+              <div class="uppercase flex">
+                <span>{{ menu.name }}</span>
+                <span v-show="menu.subMenus">
+                  <i class="bx bx-chevron-down text-xl ml-1"> </i>
+                </span>
               </div>
+            </nuxt-link>
+          </template>
+          <template v-if="menu.subMenus" #dropdown-items>
+            <div class="px-8">
+              <nuxt-link
+                v-for="subMenu in menu.subMenus"
+                :key="subMenu.name"
+                :to="subMenu.path"
+              >
+                <div class="py-3 hover:text-red-600 uppercase">
+                  {{ subMenu.name }}
+                </div>
+              </nuxt-link>
             </div>
-          </div>
-        </div>
+          </template>
+        </app-dropdown>
       </div>
       <!-- Cart  -->
       <cart-info />
@@ -92,7 +86,7 @@ export default {
           path: '/',
           subMenus: [
             { name: 'Checkout', path: '' },
-            { name: 'Cart', path: '' },
+            { name: 'Cart', path: '/cart' },
           ],
         },
         { name: 'Shop', path: '/shop' },
