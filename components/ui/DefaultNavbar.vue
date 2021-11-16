@@ -9,11 +9,11 @@
           </div>
         </template>
         <template #dropdown-items>
-          <ul class="px-6 py-2 divide-y-2 w-60">
+          <ul class="px-6 py-2 divide-y-2 space-y-2 w-60">
             <li
               v-for="n in 5"
               :key="n"
-              class="py-2 hover:text-red-600 cursor-pointer"
+              class="pt-4 pb-2 hover:text-red-600 cursor-pointer"
             >
               <div class="text-sm text-gray-500 hover:text-red-600">
                 <span>
@@ -34,10 +34,10 @@
         >
           <template #trigger>
             <nuxt-link :to="menu.path">
-              <div class="uppercase flex">
+              <div class="uppercase flex navlink">
                 <span>{{ menu.name }}</span>
                 <span v-show="menu.subMenus">
-                  <i class="bx bx-chevron-down text-xl ml-1"> </i>
+                  <i class="bx bx-chevron-down ml-1"> </i>
                 </span>
               </div>
             </nuxt-link>
@@ -100,4 +100,24 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.navlink {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    background-color: blue;
+    transition: all 200ms ease-in;
+  }
+
+  &:hover {
+    &::after {
+      background-color: red;
+      width: 100%;
+    }
+  }
+}
+</style>
