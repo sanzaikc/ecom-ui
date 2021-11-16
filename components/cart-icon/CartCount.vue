@@ -13,20 +13,21 @@
         py-0.5
       "
     >
-      {{ cartCount }}
+      {{ itemCount }}
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'CartIcon',
 
-  props: {
-    cartCount: {
-      type: [String, Number],
-      default: 0,
-    },
+  computed: {
+    ...mapGetters({
+      itemCount: 'cart/cartItemCount',
+    }),
   },
 }
 </script>

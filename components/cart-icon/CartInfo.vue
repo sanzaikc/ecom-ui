@@ -1,7 +1,7 @@
 <template>
   <div class="relative group">
     <div class="flex space-x-6 items-center">
-      <cart-count :cartCount="cartItems.length" />
+      <cart-count />
       <cart-subtotal :subtotal="subtotal" />
     </div>
     <cart-item-list-container>

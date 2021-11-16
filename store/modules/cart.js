@@ -21,6 +21,7 @@ const actions = {
 }
 
 const getters = {
+  cartItemCount: (state) => state.cartItems.length,
   cartSubtotal: (state) =>
     state.cartItems.reduce((acc, cartItem) => {
       return (acc += cartItem.price * cartItem.quantity)
