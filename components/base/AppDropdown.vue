@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="group relative">
-      <div class="group-hover:text-red-600 transition duration-200 ease-in">
+      <div class="hover:text-red-600 transition-colors duration-200 ease-in">
         <slot name="trigger" />
       </div>
       <div
